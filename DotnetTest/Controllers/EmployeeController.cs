@@ -22,6 +22,11 @@ namespace DotnetTest.Controllers
             _employeeRepo = employeeRepo;
         }
 
+        /// <summary>
+        /// Create New Employee
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult CreateNewEmployee(Employee model)
         {
@@ -39,7 +44,11 @@ namespace DotnetTest.Controllers
 
         }
 
-
+        /// <summary>
+        /// Update An Employee Information
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult UpdateEmployee(Employee model)
         {
@@ -57,6 +66,11 @@ namespace DotnetTest.Controllers
 
         }
 
+        /// <summary>
+        /// Get an Employeee by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("id")]
         public IActionResult GetEmployee(int id)
         {
@@ -73,6 +87,12 @@ namespace DotnetTest.Controllers
             }
 
         }
+
+        /// <summary>
+        /// Delete an Employee
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult DeleteEmployee(int id)
         {
@@ -90,6 +110,10 @@ namespace DotnetTest.Controllers
 
         }
 
+        /// <summary>
+        /// Get All Employees
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public  IActionResult GetAllEmployees()
         {
@@ -103,7 +127,6 @@ namespace DotnetTest.Controllers
             {
                  return BadRequest(ex.Message);
             }
-
         }
     }
 }
